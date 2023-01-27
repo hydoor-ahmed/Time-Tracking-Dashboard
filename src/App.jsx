@@ -3,6 +3,8 @@ import ReportInfo from "./components/ReportInfo";
 import { useState } from "react";
 import data from "../data.json";
 
+
+
 const App = () => {
   const [reportType, setReportType] = useState(2);
   return (
@@ -14,9 +16,25 @@ const App = () => {
           {data.map((item) => (
             <Info
               key={item.title}
-              hours={reportType == 1 ? item.timeframes.daily.current : reportType == 2 ? item.timeframes.weekly.current : reportType == 3 ? item.timeframes.monthly.current : ""}
-              prev={reportType == 1 ? item.timeframes.daily.previous : reportType == 2 ? item.timeframes.weekly.previous : reportType == 3 ? item.timeframes.monthly.previous : ""}
-              topImg={`/src/assets/images/icon-${item.title
+              hours={
+                reportType == 1
+                  ? item.timeframes.daily.current
+                  : reportType == 2
+                  ? item.timeframes.weekly.current
+                  : reportType == 3
+                  ? item.timeframes.monthly.current
+                  : ""
+              }
+              prev={
+                reportType == 1
+                  ? item.timeframes.daily.previous
+                  : reportType == 2
+                  ? item.timeframes.weekly.previous
+                  : reportType == 3
+                  ? item.timeframes.monthly.previous
+                  : ""
+              }
+              topImg={`/icon-${item.title
                 .toLocaleLowerCase()
                 .replace(" ", "-")}.svg`}
               title={item.title}
