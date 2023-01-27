@@ -1,2 +1,2 @@
 # Time-Tracking-Dashboard
-![Design Preview](./src/assets/design/desktop-preview.png)
+![Design Preview](/src/assets/design/desktop-design.jpg)
